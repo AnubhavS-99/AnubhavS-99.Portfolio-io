@@ -287,35 +287,51 @@ a {
     margin-top: 0.5rem;
 }
 
-.skills-grid {
+.skills-dashboard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
 }
 
-.skill-category h3 {
+.skill-badge {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: default;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
+    justify-content: center;
+}
+
+.skill-badge i {
+    font-size: 2.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    transition: 0.4s ease;
+}
+
+.skill-badge span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.skill-badge:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-cyan);
+    box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.2);
+}
+
+.skill-badge:hover i {
     color: var(--primary-cyan);
-}
-
-.skill-tags {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-}
-
-.skill-tags li {
-    background: rgba(0, 240, 255, 0.05);
-    border: 1px solid rgba(0, 240, 255, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: #fff;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
 /* Projects */
@@ -353,6 +369,33 @@ a {
     font-size: 0.8rem;
     color: var(--text-muted);
     font-family: 'Fira Code', monospace;
+}
+
+.project-links {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.btn.github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: none;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn.github:hover {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: var(--primary-cyan);
+    color: var(--primary-cyan);
 }
 
 /* Experience */
